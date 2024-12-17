@@ -1,0 +1,74 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Худи черного цвета с монограммами adidas Originals",
+            "description": "Мягкая ткань для свитшотов. Стиль и комфорт - это образ жизни.",
+            "price": "6900.00",
+            "quantity": 3,
+            "image": "products_images/hudi.jpg",
+            "category": 1
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Синяя куртка The north face",
+            "description": "Гладкая ткань,  ВОдонепроницпемое покрытие, Легкий и теплый пуховый наполнитель",
+            "price": "237.50",
+            "quantity": 10,
+            "image": "products_images/kostyum.jpeg",
+            "category": 4
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Коричневый спортивный versized-топ ASOS DESIGN",
+            "description": "Материал с плюшевой текстурой, Удобный и мягкий",
+            "price": "2399.00",
+            "quantity": 5,
+            "image": "products_images/futbolka.jpeg",
+            "category": 1
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Черные туфди на платформе с 3 парами люверсов Dr Martens 1461 Вех",
+            "description": "Легкая эластичная ткань сирсакер Фактурная ткань",
+            "price": "3003.00",
+            "quantity": 8,
+            "image": "products_images/tufli.jpeg",
+            "category": 2
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Черный рюкзак",
+            "description": "Легкий и удобный рюкзак для учебы",
+            "price": "388.00",
+            "quantity": 10,
+            "image": "products_images/ryukzak.jpeg",
+            "category": 5
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "ТЕмно синие брюки в стиле оверсайз",
+            "description": "оверсайз брюки осенние",
+            "price": "2999.00",
+            "quantity": 20,
+            "image": "products_images/bruki.jpeg",
+            "category": 4
+        }
+    }
+]

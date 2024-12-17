@@ -1,0 +1,26 @@
+[{"model": "products.productcategory", 
+"pk": 1, "fields": {
+    "name": "Одежда", "description": "одежда. сумки.брюки"
+    }
+}, 
+{"model": "products.productcategory", 
+"pk": 2, "fields": {
+    "name": "обувь", "description": "крассовки.туфли.макасин"
+    }
+}, 
+{"model": "products.productcategory", 
+"pk": 3, "fields": {
+    "name": "Подарки", "description": "категория подарок"
+    }
+}, 
+{"model": "products.productcategory",
+"pk": 4, "fields": {
+    "name": "новинки", "description": "категория новинок"
+    }
+}, 
+{"model": "products.productcategory",
+ "pk": 5, "fields": {
+    "name": "аксесуары", "description": "категория аксесуаров"
+    }
+}
+]

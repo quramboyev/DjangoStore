@@ -1,0 +1,113 @@
+{% extends "base.html" %} 
+{% load static %}
+
+
+{% block css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Категория товаров</h1>
+
+    <!-- Категория 1 -->
+     {{ categories_with_products }}
+    {% for item in categories_with_products %}
+    <h2 class="mb-3">{{ item.category.name }}</h2>
+    <div class="row">
+        {% for product in item.products %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}https://via.placeholder.com/300{% endif %}" 
+                class="card-img-top" 
+                alt="{{ product.name }}">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">Цена: {{ product.price }} руб.</p>
+                    <p class="card-text">{{ product.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+    <!-- Категория 2 -->
+    <h2 class="mb-3 mt-5">Рубашки</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Рубашка 1">
+                <div class="card-body">
+                    <h5 class="card-title">Рубашка 1</h5>
+                    <p class="card-text">Цена: 3000 руб.</p>
+                    <p class="card-text">Элегантная и стильная.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Рубашка 2">
+                <div class="card-body">
+                    <h5 class="card-title">Рубашка 2</h5>
+                    <p class="card-text">Цена: 3500 руб.</p>
+                    <p class="card-text">Идеально для офиса.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Рубашка 3">
+                <div class="card-body">
+                    <h5 class="card-title">Рубашка 3</h5>
+                    <p class="card-text">Цена: 2800 руб.</p>
+                    <p class="card-text">Удобная повседневная рубашка.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Категория 3 -->
+    <h2 class="mb-3 mt-5">Джинсы</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Джинсы 1">
+                <div class="card-body">
+                    <h5 class="card-title">Джинсы 1</h5>
+                    <p class="card-text">Цена: 4000 руб.</p>
+                    <p class="card-text">Прочный деним для повседневного ношения.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Джинсы 2">
+                <div class="card-body">
+                    <h5 class="card-title">Джинсы 2</h5>
+                    <p class="card-text">Цена: 4500 руб.</p>
+                    <p class="card-text">Современный крой и стиль.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Джинсы 3">
+                <div class="card-body">
+                    <h5 class="card-title">Джинсы 3</h5>
+                    <p class="card-text">Цена: 3800 руб.</p>
+                    <p class="card-text">Удобный фасон.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
+
+
+
+
+    
