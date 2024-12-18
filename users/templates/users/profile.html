@@ -1,4 +1,4 @@
-{% extends 'products/base.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
@@ -12,26 +12,27 @@
         <!-- Профиль -->
         <div class="col-md-6">
             <h3>Профиль</h3>
-            <form>
+            <form action="{% url 'users:profile' %}" method="post">
+                {% csrf_token %} 
                 <div class="mb-3">
-                    <label for="firstName" class="form-label">Имя</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Валерий">
+                    <label for="{{ form.first_name.id_for_label }}" class="form-label">Имя</label>
+                    {{ form.fist_name }}
                 </div>
                 <div class="mb-3">
-                    <label for="lastName" class="form-label">Фамилия</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Павликов">
+                    <label for="{{ form.last_name.id_for_label }}" class="form-label">Фамилия</label>
+                    {{ form.last_name }}
                 </div>
                 <div class="mb-3">
-                    <label for="imageUpload" class="form-label">Выберите изображение</label>
-                    <input class="form-control" type="file" id="imageUpload">
+                    <label for="{{ form.image.id_for_label }}" class="form-label">Выберите изображение</label>
+                    {{ form.image }}
                 </div>
                 <div class="mb-3">
-                    <label for="username" class="form-label">Имя пользователя</label>
-                    <input type="text" class="form-control" id="username" placeholder="valeriy">
+                    <label for="{{ form.username.id_for_label }}" class="form-label">Имя пользователя</label>
+                    {{ form.username }}
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Адрес электронной почты</label>
-                    <input type="email" class="form-control" id="email" placeholder="valerypavlikov@yandex.ru">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">Адрес электронной почты</label>
+                    {{ form.email }}
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Сохранить</button>
             </form>
