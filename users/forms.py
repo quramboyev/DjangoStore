@@ -50,7 +50,6 @@ class UserRegistrationForm(UserCreationForm):
         'placeholder': 'Повторите пароль'
     }))
 
-
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
@@ -67,14 +66,14 @@ class UserProfileForm(UserChangeForm):
 
     image = forms.ImageField(widget=forms.FileInput(attrs={
         'class': 'form-control'
-    }))
+    }), required=False )
 
     username = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'readonly': True
     }))
 
-    email = forms.EmailField(widget=forms.EmailInput(attrs={
+    email = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'readonly': True
     }))
